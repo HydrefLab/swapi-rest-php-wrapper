@@ -12,6 +12,8 @@ services:
       - php
 
   php:
-    image: desmart/php:7.1-fpm-debian
+    build:
+      dockerfile: ./docker/php/Dockerfile
+      context: .
     volumes:
       - '.:/usr/src/app'
